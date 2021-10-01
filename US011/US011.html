@@ -4,9 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Customer Content</title>
 </head>
 <body>
-    
+    <h1>User details Portal</h1>
+    <div class="container" id="body">
+        <form name="details">
+            <!-- TODO Finalise the view authority -->
+            <label for="user">Enter ID</label> 
+            <input type="text" name="user" id ="user">
+        </form>
+            <button onclick="show_content();" class="button" type="submit"> Show details</button>
+        
+    </div>
 </body>
+<script src="app.js"></script>
 </html>

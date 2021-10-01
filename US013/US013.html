@@ -10,7 +10,14 @@
         var customerID = document.forms["billForm"]["customerID"].value;
         var month = document.forms["billForm"]["month"].value;
         var password = document.forms["billForm"]["password"].value;
-        if(checkID(customerID) === true && checkPassword(password) === true) {
+        
+        var customers = new Map();
+        customers.set('123', '123');
+        customers.set('124', 'test');
+        customers.set('125', 'password');
+        console.log(customers.has(customerID));
+
+        if(customers.has(customerID) === true && customers.get(customerID) == password) {
             alert("CustomerID: " + customerID + "\n"
             + "Bill for the month of " + month +  " 5507.37$");
         } else {
@@ -18,28 +25,11 @@
         }
        
         }
-        function checkID(customerID) {
-            if(customerID != 123) {
-            return false;
-            } else {
-                return true;
-            }
-        }
-
-        function checkPassword(password) {    
-            if(password!= 123) {
-                return false;
-            } else {
-                return true;
-            }
-        }
-
     </script>
     
 </head>
 <body>
     <h1>View bill</h1>
-
     <form id="billForm" name="billForm" onSubmit="validate()">
         <label for="customerID">Customer ID</label>
         <input type="text" id="customerID" name="userID"><br>

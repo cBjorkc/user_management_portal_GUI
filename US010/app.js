@@ -9,7 +9,10 @@ function showUserDetails() {
         alert("Customer ID must be less than 10 numbers!");
 
     } else {
-        tableCreate(customerID)
+	if (!!document.getElementById("tbl1")){
+		document.getElementById("tbl1").remove();
+	}
+        tableCreate(customerID);
         return false;
     }
 
@@ -19,6 +22,7 @@ function showUserDetails() {
 function tableCreate(custId) {
     var body = document.body,
         tbl = document.createElement('table');
+    tbl.setAttribute("id","tbl1");
     var orderArrayHeader = ["Customer ID", " Call duration (sec)", "Data used (Kb)", "Date"];
     tbl.style.width = '1000px';
     tbl.style.border = '1px solid black';

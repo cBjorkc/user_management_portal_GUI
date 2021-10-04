@@ -19,20 +19,61 @@
 
        <form name="my_form">
            
-           <!--Design all html user controls here-->
            <div>
                <label for="custId" >Customer ID</label>
                <input type="text" name="custId"  id="custId">
 
                <button  class="button" type="submit"  id="submit" onclick= " return showUserDetails();">Search Customer Details</button>
-           </div>
 
+               
+               <button class="button"  onclick=" return showDiv();">Enter Customer Details </button>
+              
+              
+           
            
 
 
        </form>
 
     
+   </div>
+
+   </div>
+
+<div class="container"  id="welcomeDiv"  style="display:none;"   > 
+
+
+       <form name="my_form">
+           <br><br>
+           <!--Design all html user controls here-->
+           <div>
+               <label  >Customer ID</label>
+               <input type="text" name="cust_id"  id="cust_id">
+           </div>
+           <br>
+           <div>
+               <label  >Call duration (sec)</label>
+               <input type="number" name="call_duration" id="call_duration">
+           </div>
+           <br>
+           <div>
+               <label  >Data Used (Kb)</label>
+               <input type="number" name="data_used" id="data_used">
+           </div>
+            <br>
+           <div>
+               <label   >Date</label>
+               <input type="date" name="date" id="date">
+           </div>
+           <br>
+
+           <button type="submit" onclick="enterDetails();" >Submit</button>
+          
+      
+
+
+       </form>
+
    </div>
 
 </body>

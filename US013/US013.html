@@ -31,6 +31,9 @@
 </head>
 <body>
     <h1>View bill</h1>
+    <div class="container" id="body" style="background-color: #add8e6">
+  
+
     <form id="billForm" name="billForm" onSubmit="validate()">
         <label for="customerID">Customer ID</label>
         <input type="text" id="customerID" name="userID"><br>
@@ -38,7 +41,9 @@
         <input type="password" id="password" name="password"><br>
         <label for="month">Month</label>
         <input type="month" id="month" name="month" min="2010-01" max="2021-09" value="2021-09"><br>
-        <input type="submit" value="Enter" id="search" />
+        <input type="submit" class="button" value="Enter" id="search" />
     </form>
+    
+</div>
 </body>
 </html>

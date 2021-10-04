@@ -1,29 +1,23 @@
+
+
 function show_result(){
     let user  = document.getElementById("user").value;
-
+    
     check_authorization(user);
 }
 
 function check_authorization(user){
-    let button = document.getElementById("butt");
-
-    if (user.length == 3){
+    if (user.length == 4){
         console.log("Regular");
-        // if (button.style.display = "none" ){
-        //     // button.style.display ="block";
-            
-        // }else{
-        //     button.style.display = "none";
-        // }
+        if (!!document.getElementById("content_table")){
+            document.getElementById("content_table").remove();
+        }
         show_content();
-    }else if (user.length == 4){
+    }else if (user.length == 5){
         console.log("Admin");
-        // if (button.style.display == "none" ){
-        //     // button.style.display ="block";
-            
-        // }else{
-        //     button.style.display = "none";
-        // }
+        if (!!document.getElementById("content_table")){
+            document.getElementById("content_table").remove();
+        }
         show_content_admin();
     }
 }
@@ -44,17 +38,18 @@ let sort_date_desc = function(date1, date2){
 
 
 function show_content(){
-    var content = document.body;
+    let body = document.body;
     let table  = document.createElement('table');
-
-    let header_array = ["Call duration (sec) ", "Data Used (kb) ", "Date"];
-
+    table.setAttribute("ID", "content_table");
     table.style.width = "auto";
     table.style.border = "1px solid black";
     table.style.marginLeft = "auto";
     table.style.marginRight = "auto";
     table.style.marginTop ="auto";
     table.style.padding = "auto";
+
+
+    let header_array = ["Call duration (sec) ", "Data Used (kb) ", "Date"];
 
     for (var i = 0; i < header_array.length; i++){
         table.appendChild(document.createElement("th")).appendChild(document.createTextNode(header_array[i]));
@@ -69,7 +64,7 @@ function show_content(){
     }
 
     dates_arr.sort(sort_date_desc);
-
+   
     for (var i = 0; i < rnd_amount; i++){
         let tr = table.insertRow();
         for (var j = 0 ; j < 3; j++){
@@ -88,23 +83,23 @@ function show_content(){
             td.style.border =" 1px solid black";
         }
     }
-    body.appendChild(table);
 
+    body.appendChild(table);
 }
 
 function show_content_admin(){
-    let user  = document.getElementById("user").value;
-    var content = document.body;
+
+    let body = document.body;
     let table  = document.createElement('table');
-
-    let header_array = ["Cusomer ID", "Call duration (sec) ", "Data Used (kb) ", "Date"];
-
+    table.setAttribute("ID", "content_table");
     table.style.width = "auto";
     table.style.border = "1px solid black";
     table.style.marginLeft = "auto";
     table.style.marginRight = "auto";
     table.style.marginTop ="auto";
     table.style.padding = "auto";
+
+    let header_array = ["Customer ID", "Call duration (sec)", "Data Used (kb) ", "Date"];
 
     for (var i = 0; i < header_array.length; i++){
         table.appendChild(document.createElement("th")).appendChild(document.createTextNode(header_array[i]));
@@ -125,7 +120,7 @@ function show_content_admin(){
         for (var j = 0 ; j < 4; j++){
             let td = tr.insertCell();
             if (j == 0){
-                td.appendChild(document.createTextNode(user));
+                td.appendChild(document.createTextNode(Math.round(Math.random() * 999) ));
             }
             if (j == 1){
                 let rnd_duration = Math.round(Math.random() *3600);

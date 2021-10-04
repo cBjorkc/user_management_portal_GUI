@@ -1,11 +1,15 @@
 h1 {
-    text-align:center;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 form {
     position: relative;
     width: 100%;
 }
+
 label, input {
     margin-top: 5px;
 }
@@ -13,6 +17,7 @@ label, input {
 select, input {
     width: 20%;
     box-sizing: content-box;
+  
 }
 
 

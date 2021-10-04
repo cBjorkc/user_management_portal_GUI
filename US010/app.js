@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+<< << << < HEAD
+
 function showUserDetails() {
 
     var customerID = document.getElementById('custId').value;
@@ -152,7 +153,7 @@ function enterDetails() {
 
     return false;
 }
-=======
+
 function showUserDetails() {
 
     var customerID = document.getElementById('custId').value;
@@ -164,9 +165,9 @@ function showUserDetails() {
         alert("Customer ID must be less than 10 numbers!");
 
     } else {
-	if (!!document.getElementById("tbl1")){
-		document.getElementById("tbl1").remove();
-	}
+        if (!!document.getElementById("tbl1")) {
+            document.getElementById("tbl1").remove();
+        }
         tableCreate(customerID);
         return false;
     }
@@ -177,7 +178,7 @@ function showUserDetails() {
 function tableCreate(custId) {
     var body = document.body,
         tbl = document.createElement('table');
-    tbl.setAttribute("id","tbl1");
+    tbl.setAttribute("id", "tbl1");
     var orderArrayHeader = ["Customer ID", " Call duration (sec)", "Data used (Kb)", "Date"];
     tbl.style.width = '1000px';
     tbl.style.border = '1px solid black';
@@ -238,5 +239,5 @@ var date_sort_desc = function(date1, date2) {
     if (date1 > date2) return -1;
     if (date1 < date2) return 1;
     return 0;
-};
->>>>>>> 0855f69f61bbc9456282fcd190855c3c803740e8
+}; >>>
+>>> > 0855 f69f61bbc9456282fcd190855c3c803740e8

@@ -5,14 +5,14 @@ h1 {
 form {
     position: relative;
     width: 100%;
-    text-align: center;
 }
 label, input {
     margin-top: 5px;
 }
 
-input {
-    margin-left: 1%;
+select, input {
+    width: 20%;
+    box-sizing: content-box;
 }
 
 

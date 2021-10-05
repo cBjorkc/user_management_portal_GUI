@@ -1,5 +1,3 @@
-<< << << < HEAD
-
 function showUserDetails() {
 
     var customerID = document.getElementById('custId').value;
@@ -84,9 +82,7 @@ function tableCreate(custId) {
 
 }
 
-function clear() {
-    document.getElementById("goy").innerHTML = "";
-}
+
 
 function randomDate(start, end) {
     return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
@@ -239,5 +235,4 @@ var date_sort_desc = function(date1, date2) {
     if (date1 > date2) return -1;
     if (date1 < date2) return 1;
     return 0;
-}; >>>
->>> > 0855 f69f61bbc9456282fcd190855c3c803740e8
+};

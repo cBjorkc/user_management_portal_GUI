@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script  src="app.js"></script>
+        <title>US012 Usage Management Portal</title>
+    </head>
+    <body>
+        <h4>Generate bill for customer</h4>
+        <div class="container" id="body" style="background-color: #add8e6">
+        <form name="calculate_form">
+            <label for="customer_id">Customer ID: </label>
+            <input type="text" id="customer_id" name="customer_id"><br><br>
+            <button  class="button" type="submit"  id="submit" onclick= " return checkCustomerId();">Generate Customer Bill</button>
+        </form>
+    </div>
+    </body>
 </html>
